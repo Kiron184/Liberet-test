@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+  max-height: 1280px;
+  height: 1280px;
+  display: grid;
+  place-content: center;
+  background-color: #FFFFFF;
+  max-width: 720px;
+  width: 720px;
+  aspect-ratio: 9/16;
+}

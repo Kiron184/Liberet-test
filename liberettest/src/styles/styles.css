@@ -1,0 +1,88 @@
+.Card{
+    border-radius: 10px;
+    box-shadow: 50px;
+    width: 200px;
+    height: 300px;
+}
+
+.Dish{
+    border-radius: 10px;
+    box-shadow: 50px;
+    width: 200px;
+    height: 260px;
+    display: block;
+}
+
+.Clock{
+    width: 20px;
+    position: absolute;
+    left:130px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    left: 25px;
+    top: 275px;
+}
+
+.Info{
+    position: relative;
+}
+
+.strMeal{
+    position: relative;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    left:12.5px;
+    bottom: 30px;
+}
+
+.strArea{
+    position: relative;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    left:12.5px;
+    bottom: 70px;
+}
+
+.strTags{
+    position: relative;
+    left:125px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    bottom: 295px;
+}
+
+.price{
+    position: relative;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    left:135px;
+    bottom: 62.5px;
+}
+
+.Chips{
+    background-color: #E4E4E4;
+}
+
+.chipSelect{
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.chipButton{
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.masUno{
+    color: #FDC963;
+}
+
+.navBar{
+    background: #E4E4E4;
+    
+}
