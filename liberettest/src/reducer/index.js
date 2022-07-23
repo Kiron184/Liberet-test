@@ -1,45 +1,28 @@
-let orden = 1;
 const initialState = {
-  users: [],
+  date: [],
+  period: [],
+  categorie: [],
 };
 
 export default function rootReducer(state = initialState, action) {
   switch (action.type) {
-    case "CREAR_DOCENTE":
+    case "SELECT_DATE":
       return {
         ...state,
-        users: [...state.users, { ...action.payload, id: orden++ }],
+        date: [action.payload],
       };
 
-    case "BORRAR_DOCENTE":
+    case "SELECT_PERIOD":
       return {
         ...state,
-        users: state.users.filter((user) => user.id !== action.payload),
+        period: [action.payload],
       };
 
-    case "TRAER_DOCENTES":
+    case "SELECT_CATEGORIE":
       return {
         ...state,
-        users: [...state.users, { ...action.payload, id: orden++ }],
+        categorie: [action.payload],
       };
-    case "MODIFICAR_DOCENTE":
-      if (action.payload.id) {
-        return {
-          ...state,
-          users: state.users.map((user) => {
-            if (user.id === action.payload.id) {
-              return {
-                ...user,
-                ...action.payload,
-              };
-            }
-            return user;
-          }),
-        };
-      }
-
-      return state;
-
     default:
       return { ...state };
   }

@@ -1,20 +1,8 @@
-export function crearDocente(info) {
+export function selectDate(date) {
   return {
-    type: "CREAR_DOCENTE",
-    payload: info,
+    type: "SELECT_DATE",
+    payload: date,
   };
 }
-
-export function modificarDocente(info) {
-  return {
-    type: "MODIFICAR_DOCENTE",
-    payload: info,
-  };
-}
-
-export function borrarDocente(info) {
-  return {
-    type: "BORRAR_DOCENTE",
-    payload: info,
-  };
-}
+export function selectPeriod(period) {}
+export function selectCategorie(categorie) {}
