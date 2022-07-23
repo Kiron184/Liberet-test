@@ -36,11 +36,11 @@ export default function Card({ meal }) {
       </p>
       <p className="strArea">{strArea}</p>
       <p className="strTags" id={idMeal}>
-        {strTags
-          ? strTags
-          : document.getElementById(idMeal)?.classList.add("d-none")}
+        {!strTags ? "" : strTags}
       </p>
-      <p className="price">{price}</p>
+      <p className="price">
+        {"$ " + price.slice(0, 2) + "." + price.slice(2) + " MXN"}
+      </p>
       <img className="Clock" src={clock} alt="Clock" />
     </div>
   );

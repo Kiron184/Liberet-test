@@ -1,7 +1,8 @@
 const initialState = {
-  date: [],
-  period: [],
+  date: [{ day: { day: "Dom", date: "28" } }],
+  period: ["11:00 am - 12:00 am"],
   categorie: [],
+  service: ["Beef"],
 };
 
 export default function rootReducer(state = initialState, action) {
@@ -22,6 +23,11 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
         categorie: [action.payload],
+      };
+    case "SELECT_SERVICE":
+      return {
+        ...state,
+        service: [action.payload],
       };
     default:
       return { ...state };

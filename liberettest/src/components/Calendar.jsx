@@ -19,6 +19,10 @@ export default function Calendar() {
   function handleClick(e, date) {
     e.preventDefault(e);
     dispatch(selectDate(date));
+    selectedDate(date);
+  }
+
+  function selectedDate(date) {
     Calendar.forEach((day) => {
       if (dated[0]?.day?.day === day?.day) {
         document.getElementById(day.day).classList.add("DateSelected");
@@ -26,18 +30,29 @@ export default function Calendar() {
         document.getElementById(day.day).classList.remove("DateSelected");
       }
     });
+    setCalendar([
+      { day: "Dom", date: "28" },
+      { day: "Lun", date: "29" },
+      { day: "Mar", date: "30" },
+      { day: "Mié", date: "01" },
+      { day: "Jue", date: "02" },
+      { day: "Vie", date: "03" },
+      { day: "Sáb", date: "04" },
+    ]);
   }
 
-  useEffect(() => {});
+  useEffect(() => {
+    selectedDate();
+  }, [dated]);
 
   return (
     <>
       <hr />
-      <div className="w-100 d-flex mt-1 justify-content-center">
+      <div className="Z-in w-100 d-flex mt-1 justify-content-center">
         {Calendar?.map((day) => (
           <button
             style={{ outline: "0" }}
-            className="mx-4 border-0 bg-white"
+            className="mx-3 border-0 bg-white Dates"
             name={day?.day}
             num={day?.date}
             key={day.day}
